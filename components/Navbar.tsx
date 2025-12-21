@@ -71,17 +71,18 @@ export default function Navbar() {
       style={{ height: "64px" }}
     >
       <div className="gradient-line" />
-      <div className="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
         <motion.a
           href="#"
           whileHover={{ scale: 1.02 }}
-          className="flex items-center gap-3 text-xl font-bold text-white tracking-tight"
+          className="flex items-center gap-2 sm:gap-3 text-lg sm:text-xl font-bold text-white tracking-tight"
         >
-          <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="sm:w-[32px] sm:h-[32px]">
             <path d="M32 0L59.7128 16V48L32 64L4.28718 48V16L32 0Z" fill="#38BDF8"/>
             <text x="32" y="40" fontFamily="system-ui, -apple-system, sans-serif" fontSize="28" fontWeight="700" fill="white" textAnchor="middle">VA</text>
           </svg>
-          Vinay Adari
+          <span className="hidden xs:inline sm:inline">Vinay Adari</span>
+          <span className="inline xs:hidden sm:hidden">VA</span>
         </motion.a>
 
         <div className="hidden md:flex items-center gap-8">

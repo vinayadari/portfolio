@@ -50,25 +50,25 @@ export default function Education() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="education" className="relative py-24 px-6 bg-[#111827]" ref={ref}>
+    <section id="education" className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-[#111827]" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-3 text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 text-white">
             Education
           </h2>
-          <div className="w-16 h-1 bg-[#8B5CF6]" />
+          <div className="w-12 sm:w-16 h-1 bg-[#8B5CF6]" />
         </motion.div>
 
         <motion.div
           variants={container}
           initial="hidden"
           animate={isInView ? "show" : "hidden"}
-          className="space-y-6 max-w-4xl"
+          className="space-y-5 sm:space-y-6 max-w-4xl"
         >
           {education.map((edu) => {
             const Icon = edu.icon;
@@ -76,23 +76,23 @@ export default function Education() {
               <motion.div
                 key={edu.institution}
                 variants={item}
-                className="group glass-card glass-card-hover rounded-2xl p-8"
+                className="group glass-card glass-card-hover rounded-xl sm:rounded-2xl p-6 sm:p-8"
               >
-                <div className="flex items-start gap-6">
+                <div className="flex items-start gap-4 sm:gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-14 h-14 rounded-xl bg-[#38BDF8]/10 border border-[#38BDF8]/20 flex items-center justify-center">
-                      <Icon className="w-7 h-7 text-[#38BDF8]" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#38BDF8]/10 border border-[#38BDF8]/20 flex items-center justify-center">
+                      <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-[#38BDF8]" />
                     </div>
                   </div>
 
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">
                       {edu.institution}
                     </h3>
 
-                    <p className="text-base text-[#E5E7EB] mb-3">{edu.degree}</p>
+                    <p className="text-sm sm:text-base text-[#E5E7EB] mb-3">{edu.degree}</p>
 
-                    <div className="flex flex-wrap gap-4 text-sm">
+                    <div className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm">
                       <span className="flex items-center gap-2 text-[#9CA3AF]">
                         <span className="w-2 h-2 bg-[#38BDF8] rounded-full" />
                         {edu.period}
@@ -113,20 +113,20 @@ export default function Education() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-12 max-w-xs"
+          className="mt-8 sm:mt-12 max-w-xs"
         >
           {achievements.map((achievement) => {
             const Icon = achievement.icon;
             return (
               <div
                 key={achievement.title}
-                className="glass-card rounded-2xl p-8 text-center"
+                className="glass-card rounded-xl sm:rounded-2xl p-6 sm:p-8 text-center"
               >
-                <Icon className="w-10 h-10 text-[#38BDF8] mx-auto mb-3" />
-                <div className="text-5xl font-bold text-white mb-2">
+                <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-[#38BDF8] mx-auto mb-3" />
+                <div className="text-4xl sm:text-5xl font-bold text-white mb-2">
                   {achievement.value}
                 </div>
-                <div className="text-[#9CA3AF]">{achievement.title}</div>
+                <div className="text-sm sm:text-base text-[#9CA3AF]">{achievement.title}</div>
               </div>
             );
           })}

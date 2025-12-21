@@ -6,17 +6,17 @@ import ParticlesBackground from "./Particles";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 pt-20 sm:pt-16">
       <ParticlesBackground />
 
       <div className="absolute inset-0 noise-texture opacity-40" />
       <div className="absolute inset-0 engineering-grid" />
 
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#38BDF8]/20 rounded-full blur-[150px]" />
-      <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-[#8B5CF6]/15 rounded-full blur-[150px]" />
+      <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] bg-[#38BDF8]/20 rounded-full blur-[100px] sm:blur-[150px]" />
+      <div className="absolute bottom-1/4 right-1/4 w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] bg-[#8B5CF6]/15 rounded-full blur-[100px] sm:blur-[150px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-12 text-left md:text-left flex items-center min-h-[80vh]">
-        <div className="max-w-3xl space-y-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 text-left flex items-center min-h-[80vh]">
+        <div className="max-w-3xl space-y-6 sm:space-y-8">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -34,7 +34,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           >
-            <h1 className="text-6xl md:text-8xl font-extrabold mb-6 relative" style={{ fontWeight: 800 }}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold mb-4 sm:mb-6 relative" style={{ fontWeight: 800 }}>
               {"Vinay Adari".split("").map((char, index) => (
                 <motion.span
                   key={index}
@@ -91,11 +91,11 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.12, ease: [0.4, 0, 0.2, 1] }}
             className="space-y-4"
           >
-            <h2 className="text-2xl md:text-3xl text-white font-semibold" style={{ fontWeight: 600, lineHeight: 1.3 }}>
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold" style={{ fontWeight: 600, lineHeight: 1.3 }}>
               Full Stack Developer & Machine Learning Enthusiast
             </h2>
 
-            <p className="text-lg md:text-xl text-[#9CA3AF] max-w-2xl" style={{ fontWeight: 400, lineHeight: 1.6 }}>
+            <p className="text-base sm:text-lg md:text-xl text-[#9CA3AF] max-w-2xl" style={{ fontWeight: 400, lineHeight: 1.6 }}>
               "im not a great coder, but a good coder with great habits"
             </p>
 
@@ -109,19 +109,19 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 pt-8"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-6 sm:pt-8"
           >
             <a
               href="#projects"
-              className="btn-glow group px-8 py-4 bg-[#38BDF8] hover:bg-[#38BDF8]/90 text-white rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-xl hover:shadow-[#38BDF8]/25"
+              className="btn-glow group px-6 sm:px-8 py-3 sm:py-4 bg-[#38BDF8] hover:bg-[#38BDF8]/90 text-white rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-xl hover:shadow-[#38BDF8]/25 text-sm sm:text-base"
             >
               view projects
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </a>
 
             <a
               href="#contact"
-              className="px-8 py-4 border-2 border-[#8B5CF6]/30 hover:border-[#8B5CF6]/60 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:bg-[#8B5CF6]/10 backdrop-blur-sm"
+              className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-[#8B5CF6]/30 hover:border-[#8B5CF6]/60 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:bg-[#8B5CF6]/10 backdrop-blur-sm text-sm sm:text-base"
             >
               Get in Touch
             </a>
