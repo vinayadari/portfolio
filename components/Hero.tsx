@@ -50,12 +50,13 @@ export default function Hero() {
                     ease: [0.4, 0, 0.2, 1],
                   }}
                   whileHover={{
-                    scale: 1.15,
+                    rotateZ: -8,
+                    y: -5,
+                    scale: 1.1,
                     color: "#38BDF8",
-                    textShadow: "0 0 20px rgba(56, 189, 248, 0.8), 0 0 40px rgba(56, 189, 248, 0.4)",
-                    transition: { duration: 0.2 }
+                    transition: { duration: 0.3, ease: [0.4, 0, 0.2, 1] }
                   }}
-                  className="inline-block text-white"
+                  className="inline-block text-white cursor-pointer relative"
                   style={{
                     display: char === " " ? "inline" : "inline-block",
                     transformStyle: "preserve-3d",
