@@ -35,37 +35,52 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           >
             <h1 className="text-6xl md:text-8xl font-extrabold mb-6 relative" style={{ fontWeight: 800 }}>
-              <motion.span
-                className="inline-block bg-gradient-to-r from-[#38BDF8] via-[#8B5CF6] to-[#38BDF8] bg-clip-text text-transparent bg-[length:200%_auto]"
-                animate={{
-                  backgroundPosition: ["0%", "100%", "0%"],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-                style={{
-                  filter: "drop-shadow(0 0 30px rgba(56, 189, 248, 0.3))",
-                }}
-              >
-                {"Vinay Adari".split("").map((char, index) => (
+              {"Vinay Adari".split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, y: 50, rotateX: -90 }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    rotateX: 0,
+                  }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.8 + index * 0.08,
+                    ease: [0.4, 0, 0.2, 1],
+                  }}
+                  whileHover={{
+                    scale: 1.15,
+                    color: "#38BDF8",
+                    textShadow: "0 0 20px rgba(56, 189, 248, 0.8), 0 0 40px rgba(56, 189, 248, 0.4)",
+                    transition: { duration: 0.2 }
+                  }}
+                  className="inline-block text-white"
+                  style={{
+                    display: char === " " ? "inline" : "inline-block",
+                    transformStyle: "preserve-3d",
+                    perspective: "1000px",
+                  }}
+                >
                   <motion.span
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.8 + index * 0.05,
-                      ease: [0.4, 0, 0.2, 1],
+                    animate={{
+                      textShadow: [
+                        "0 0 20px rgba(56, 189, 248, 0.3)",
+                        "0 0 30px rgba(139, 92, 246, 0.4)",
+                        "0 0 20px rgba(56, 189, 248, 0.3)",
+                      ],
                     }}
-                    className="inline-block hover:scale-110 transition-transform duration-200"
-                    style={{ display: char === " " ? "inline" : "inline-block" }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: index * 0.1,
+                    }}
                   >
                     {char === " " ? "\u00A0" : char}
                   </motion.span>
-                ))}
-              </motion.span>
+                </motion.span>
+              ))}
             </h1>
           </motion.div>
 
@@ -76,11 +91,11 @@ export default function Hero() {
             className="space-y-4"
           >
             <h2 className="text-2xl md:text-3xl text-white font-semibold" style={{ fontWeight: 600, lineHeight: 1.3 }}>
-              Backend-Focused Full Stack Engineer
+              Full Stack Developer & Machine Learning Enthusiast
             </h2>
 
             <p className="text-lg md:text-xl text-[#9CA3AF] max-w-2xl" style={{ fontWeight: 400, lineHeight: 1.6 }}>
-              I build APIs, design databases, and handle the server-side logic that makes applications work under load.
+              "im not a great coder, but a good coder with great habits"
             </p>
 
             <div className="flex items-center gap-2 text-[#9CA3AF] pt-2">
@@ -99,7 +114,7 @@ export default function Hero() {
               href="#projects"
               className="btn-glow group px-8 py-4 bg-[#38BDF8] hover:bg-[#38BDF8]/90 text-white rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-xl hover:shadow-[#38BDF8]/25"
             >
-              See Backend Projects
+              view projects
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
 
@@ -107,7 +122,7 @@ export default function Hero() {
               href="#contact"
               className="px-8 py-4 border-2 border-[#8B5CF6]/30 hover:border-[#8B5CF6]/60 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:bg-[#8B5CF6]/10 backdrop-blur-sm"
             >
-              Open for Internships
+              Get in Touch
             </a>
           </motion.div>
         </div>
