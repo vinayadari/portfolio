@@ -8,21 +8,39 @@ import { ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     title: "Blog Application",
-    description:
-      "Full-featured blog platform with user authentication, CRUD operations, and multi-user support. Optimized backend with MongoDB Atlas.",
+    problem: "Multi-user content platform with secure authentication and full CRUD operations",
     tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    highlights: [
+      "JWT-based auth with token refresh strategy to prevent session hijacking",
+      "MongoDB schema design with references for user-post relationships and efficient queries",
+      "RESTful API with proper HTTP status codes and centralized error handling middleware",
+      "Input sanitization and bcrypt password hashing to defend against injection attacks",
+    ],
+    impact: "Handles concurrent users with role-based permissions and secure session management",
   },
   {
-    title: "AI Job Assigning Platform",
-    description:
-      "Intelligent task management powered by Google Gemini API with AI-driven recommendations, admin/employee dashboards, and real-time updates.",
-    tech: ["MERN", "Gemini API", "JWT"],
+    title: "Task Management with AI Integration",
+    problem: "Intelligent task assignment system with AI-powered recommendations",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Gemini API", "JWT"],
+    highlights: [
+      "Integrated Google Gemini API for task-to-employee matching based on skill profiles",
+      "Role-based access control (admin vs employee) enforced at both API and route level",
+      "Async/await patterns for AI API calls to prevent blocking the Node.js event loop",
+      "Polling-based updates for task status (learned trade-offs vs WebSocket overhead)",
+    ],
+    impact: "Reduced manual assignment time by automating skill-based task distribution",
   },
   {
     title: "Real-Time Chat Application",
-    description:
-      "Responsive messaging platform with live chat, typing indicators, and online status. Secure WebSocket connections with token-based authentication.",
-    tech: ["Socket.io", "React", "Node.js", "JWT"],
+    problem: "Messaging platform with live communication and presence awareness",
+    tech: ["React", "Node.js", "Socket.io", "JWT"],
+    highlights: [
+      "WebSocket authentication using JWT tokens validated during Socket.io handshake",
+      "Room-based message routing to isolate conversations and reduce unnecessary broadcasts",
+      "Typing indicators and online/offline status tracking using bidirectional Socket events",
+      "Graceful reconnection handling with message queue persistence during disconnects",
+    ],
+    impact: "Supports real-time messaging with minimal latency and automatic recovery from network issues",
   },
 ];
 
@@ -54,43 +72,76 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-3 text-white">
-            Featured Projects
+          <p className="label-text text-[#8B5CF6] mb-4 font-semibold tracking-wider">BACKEND WORK</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white leading-tight">
+            Projects that demonstrate technical depth
           </h2>
-          <div className="w-16 h-1 bg-[#8B5CF6]" />
+          <p className="text-lg text-[#9CA3AF] max-w-3xl" style={{ lineHeight: 1.7 }}>
+            Each project focuses on backend fundamentals: authentication, database design, API architecture, and handling real-world constraints.
+          </p>
         </motion.div>
 
         <motion.div
           variants={container}
           initial="hidden"
           animate={isInView ? "show" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-5xl"
         >
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
               variants={item}
-              whileHover={{ y: -8 }}
-              className="group glass-card glass-card-hover rounded-2xl p-8 transition-all duration-300"
+              whileHover={{ y: -4 }}
+              className="group glass-card rounded-2xl p-8 md:p-10 transition-all duration-300 border border-white/5 hover:border-[#38BDF8]/30"
             >
-              <div className="space-y-5">
-                <h3 className="text-2xl font-bold text-white group-hover:text-[#38BDF8] transition-colors">
-                  {project.title}
-                </h3>
+              <div className="space-y-6">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg bg-[#38BDF8]/10 border border-[#38BDF8]/30 flex items-center justify-center text-[#38BDF8] font-bold">
+                        {index + 1}
+                      </div>
+                      <h3 className="text-2xl font-bold text-white group-hover:text-[#38BDF8] transition-colors">
+                        {project.title}
+                      </h3>
+                    </div>
+                    <p className="text-[#9CA3AF] text-base font-medium" style={{ lineHeight: 1.6 }}>
+                      {project.problem}
+                    </p>
+                  </div>
+                </div>
 
-                <p className="text-[#E5E7EB] leading-relaxed text-base min-h-[100px]">
-                  {project.description}
-                </p>
+                <div className="border-t border-white/10 pt-6">
+                  <h4 className="text-sm font-semibold text-[#38BDF8] mb-4 uppercase tracking-wider">Technical Highlights</h4>
+                  <ul className="space-y-3">
+                    {project.highlights.map((highlight, i) => (
+                      <li key={i} className="flex gap-3 text-[#E5E7EB] text-sm" style={{ lineHeight: 1.7 }}>
+                        <span className="text-[#8B5CF6] mt-1 flex-shrink-0">▸</span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1.5 text-xs font-medium bg-[#38BDF8]/10 text-[#38BDF8] rounded-lg border border-[#38BDF8]/20"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                <div className="border-t border-white/10 pt-6">
+                  <div className="flex items-start justify-between gap-6 flex-wrap">
+                    <div className="flex-1">
+                      <h4 className="text-xs font-semibold text-[#9CA3AF] mb-3 uppercase tracking-wider">Impact</h4>
+                      <p className="text-[#E5E7EB] text-sm" style={{ lineHeight: 1.6 }}>
+                        {project.impact}
+                      </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1.5 text-xs font-medium bg-[#38BDF8]/10 text-[#38BDF8] rounded-lg border border-[#38BDF8]/20 hover:bg-[#38BDF8]/20 transition-colors"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

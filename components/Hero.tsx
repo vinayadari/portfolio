@@ -23,9 +23,10 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
             className="mb-6"
           >
-            <p className="label-text text-[#9CA3AF]">
-              Building scalable systems with code & intent
-            </p>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#38BDF8]/10 border border-[#38BDF8]/20">
+              <div className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse" />
+              <span className="text-sm font-medium text-[#38BDF8]">Open to Backend Roles</span>
+            </div>
           </motion.div>
 
           <motion.div
@@ -33,8 +34,38 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           >
-            <h1 className="text-6xl md:text-8xl font-extrabold text-white mb-4" style={{ fontWeight: 800 }}>
-              Vinay Adari
+            <h1 className="text-6xl md:text-8xl font-extrabold mb-6 relative" style={{ fontWeight: 800 }}>
+              <motion.span
+                className="inline-block bg-gradient-to-r from-[#38BDF8] via-[#8B5CF6] to-[#38BDF8] bg-clip-text text-transparent bg-[length:200%_auto]"
+                animate={{
+                  backgroundPosition: ["0%", "100%", "0%"],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                style={{
+                  filter: "drop-shadow(0 0 30px rgba(56, 189, 248, 0.3))",
+                }}
+              >
+                {"Vinay Adari".split("").map((char, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.8 + index * 0.05,
+                      ease: [0.4, 0, 0.2, 1],
+                    }}
+                    className="inline-block hover:scale-110 transition-transform duration-200"
+                    style={{ display: char === " " ? "inline" : "inline-block" }}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </motion.span>
+                ))}
+              </motion.span>
             </h1>
           </motion.div>
 
@@ -42,47 +73,41 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.12, ease: [0.4, 0, 0.2, 1] }}
+            className="space-y-4"
           >
-            <h2 className="text-xl md:text-2xl text-[#E5E7EB] font-normal mb-4" style={{ fontWeight: 450, lineHeight: 1.4 }}>
-              Full Stack Developer & Machine Learning Enthusiast
+            <h2 className="text-2xl md:text-3xl text-white font-semibold" style={{ fontWeight: 600, lineHeight: 1.3 }}>
+              Backend-Focused Full Stack Engineer
             </h2>
 
-            <div className="flex items-center gap-2 text-[#9CA3AF]">
+            <p className="text-lg md:text-xl text-[#9CA3AF] max-w-2xl" style={{ fontWeight: 400, lineHeight: 1.6 }}>
+              I build APIs, design databases, and handle the server-side logic that makes applications work under load.
+            </p>
+
+            <div className="flex items-center gap-2 text-[#9CA3AF] pt-2">
               <MapPin className="w-4 h-4" />
               <span className="text-sm">Bengaluru, Karnataka, India</span>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.36, ease: [0.4, 0, 0.2, 1] }}
-            className="max-w-2xl"
-          >
-            <p className="text-lg md:text-xl text-[#9CA3AF] italic" style={{ fontWeight: 400, lineHeight: 1.6, opacity: 0.8 }}>
-              "I'm not a great coder, but a good coder with great habits."
-            </p>
-          </motion.div>
-
-          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 pt-6"
+            className="flex flex-col sm:flex-row gap-4 pt-8"
           >
             <a
               href="#projects"
               className="btn-glow group px-8 py-4 bg-[#38BDF8] hover:bg-[#38BDF8]/90 text-white rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 hover:shadow-xl hover:shadow-[#38BDF8]/25"
             >
-              View Projects
+              See Backend Projects
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
 
             <a
               href="#contact"
-              className="px-8 py-4 border border-white/10 hover:border-white/20 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:bg-white/5"
+              className="px-8 py-4 border-2 border-[#8B5CF6]/30 hover:border-[#8B5CF6]/60 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:bg-[#8B5CF6]/10 backdrop-blur-sm"
             >
-              Get in Touch
+              Open for Internships
             </a>
           </motion.div>
         </div>
