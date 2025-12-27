@@ -19,7 +19,7 @@ import {
   Leaf,
   Box,
   CircuitBoard,
-  Table,
+  Table
 } from "lucide-react";
 
 const techStack = {

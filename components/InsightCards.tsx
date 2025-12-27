@@ -5,7 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Layers, Brain, Code2 } from "lucide-react";
 
-const insights = [
+const insights = [ 
   {
     icon: Layers,
     title: "Backend-First Approach",
