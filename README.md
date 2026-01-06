@@ -66,8 +66,5 @@ npm start
     └── favicon.svg     # Custom hexagonal favicon
 ```
 
-## Design Philosophy
-
-Built with care, not rush.
 
 © 2025 Vinay Adari. All rights reserved.
