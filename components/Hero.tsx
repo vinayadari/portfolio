@@ -92,7 +92,7 @@ export default function Hero() {
             className="space-y-4"
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold" style={{ fontWeight: 600, lineHeight: 1.3 }}>
-              Full Stack Developer & Machine Learning Enthusiast
+              Full Stack Developer
             </h2>
 
             <p className="text-base sm:text-lg md:text-xl text-[#9CA3AF] max-w-2xl" style={{ fontWeight: 400, lineHeight: 1.6 }}>
