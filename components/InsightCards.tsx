@@ -7,23 +7,23 @@ import { Layers, Brain, Code2 } from "lucide-react";
 const insights = [
   {
     icon: Layers,
-    title: "Starting with the Backend",
+    title: "Scalable Web Applications",
     description:
-      "When building a project, I usually begin with APIs, database schemas, and auth flows before focusing on UI details.",
+      "I enjoy building full-stack applications with proper API design, authentication, and database architecture that can handle real-world usage.",
     color: "38BDF8",
   },
   {
     icon: Brain,
-    title: "Choosing Tools Thoughtfully",
+    title: "AI Integration",
     description:
-      "I try to choose technologies based on project needs — like using SQL or NoSQL depending on data and queries, not trends.",
+      "Strong interest in integrating AI and ML models into products — from natural language processing to computer vision and sentiment analysis.",
     color: "8B5CF6",
   },
   {
     icon: Code2,
-    title: "Writing Readable Code",
+    title: "Backend Systems",
     description:
-      "I aim to keep code modular and easy to understand so it’s maintainable for future changes and collaborators.",
+      "I focus on building robust backend systems with RESTful APIs, secure authentication, and well-structured databases.",
     color: "38BDF8",
   },
 ];

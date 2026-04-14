@@ -16,6 +16,7 @@
     "next": "16.0.10",
     "react": "19.2.1",
     "react-dom": "19.2.1",
+    "trae": "^1.4.2",
     "tsparticles": "^3.9.1",
     "tsparticles-engine": "^2.12.0"
   },

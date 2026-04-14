@@ -27,8 +27,8 @@ const contacts = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/vinayadari",
-    href: "https://linkedin.com/in/vinay-adari-261241200",
+    value: "linkedin.com/in/vinayadari",
+    href: "https://linkedin.com/in/vinayadari",
   },
 ];
 

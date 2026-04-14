@@ -7,39 +7,36 @@ import { useRef } from "react";
 const projects = [
   {
     title: "Blog Application",
-    problem: "Multi-user content platform with secure authentication and full CRUD operations",
-    tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    problem: "Full-stack blog platform with authentication and role-based access control",
+    tech: ["Express.js", "React.js", "Node.js", "MongoDB", "JWT", "Bcrypt"],
     highlights: [
-      "JWT-based auth with token refresh strategy to prevent session hijacking",
-      "MongoDB schema design with references for user-post relationships and efficient queries",
-      "RESTful API with proper HTTP status codes and centralized error handling middleware",
-      "Input sanitization and bcrypt password hashing to defend against injection attacks",
+      "Built a full-stack blog platform with authentication and role-based access control",
+      "Developed RESTful APIs with complete CRUD functionality and secure authorization",
+      "Designed a responsive UI with pagination and lazy loading for performance optimization",
     ],
-    impact: "Handles concurrent users with role-based permissions and secure session management",
+    impact: "Secure multi-user content platform with role-based permissions and optimized performance",
   },
   {
-    title: "Task Management with AI Integration",
-    problem: "Intelligent task assignment system with AI-powered recommendations",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Gemini API", "JWT"],
+    title: "News Analyzer System",
+    problem: "Front-end enabling topic-based search, bookmarking, and exploration of news articles",
+    tech: ["React.js", "Python", "UMAP"],
     highlights: [
-      "Integrated Google Gemini API for task-to-employee matching based on skill profiles",
-      "Role-based access control (admin vs employee) enforced at both API and route level",
-      "Async/await patterns for AI API calls to prevent blocking the Node.js event loop",
-      "Polling-based updates for task status (learned trade-offs vs WebSocket overhead)",
+      "Developed a front-end enabling topic-based search, bookmarking, and exploration",
+      "Designed UI for clustered news visualization with dynamic filtering",
+      "Integrated ML APIs for real-time sentiment-based article rendering",
     ],
-    impact: "Reduced manual assignment time by automating skill-based task distribution",
+    impact: "Interactive news exploration with AI-powered sentiment analysis and dynamic clustering",
   },
   {
-    title: "Real-Time Chat Application",
-    problem: "Messaging platform with live communication and presence awareness",
-    tech: ["React", "Node.js", "Socket.io", "JWT"],
+    title: "Natural Language to SQL Interface",
+    problem: "CLI tool converting natural language queries into executable SQL using LLMs",
+    tech: ["Python", "PostgreSQL", "LLaMA 3"],
     highlights: [
-      "WebSocket authentication using JWT tokens validated during Socket.io handshake",
-      "Room-based message routing to isolate conversations and reduce unnecessary broadcasts",
-      "Typing indicators and online/offline status tracking using bidirectional Socket events",
-      "Graceful reconnection handling with message queue persistence during disconnects",
+      "Built a CLI tool converting natural language queries into executable SQL using LLMs",
+      "Integrated with PostgreSQL for automated execution and structured results",
+      "Generated human-readable summaries to improve accessibility for non-technical users",
     ],
-    impact: "Supports real-time messaging with minimal latency and automatic recovery from network issues",
+    impact: "Makes database querying accessible to non-technical users through natural language",
   },
 ];
 
@@ -71,12 +68,12 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-12 sm:mb-16"
         >
-          <p className="label-text text-[#8B5CF6] mb-3 sm:mb-4 font-semibold tracking-wider text-xs sm:text-sm">BACKEND WORK</p>
+          <p className="label-text text-[#8B5CF6] mb-3 sm:mb-4 font-semibold tracking-wider text-xs sm:text-sm">PROJECTS</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white leading-tight">
             Projects that demonstrate technical depth
           </h2>
           <p className="text-base sm:text-lg text-[#9CA3AF] max-w-3xl" style={{ lineHeight: 1.7 }}>
-            Each project focuses on backend fundamentals: authentication, database design, API architecture, and handling real-world constraints.
+            Each project focuses on real-world problem solving: full-stack development, AI integration, database design, and building accessible tools.
           </p>
         </motion.div>
 
@@ -111,7 +108,7 @@ export default function Projects() {
                 </div>
 
                 <div className="border-t border-white/10 pt-5 sm:pt-6">
-                  <h4 className="text-xs sm:text-sm font-semibold text-[#38BDF8] mb-3 sm:mb-4 uppercase tracking-wider">Technical Highlights</h4>
+                  <h4 className="text-xs sm:text-sm font-semibold text-[#38BDF8] mb-3 sm:mb-4 uppercase tracking-wider">Key Features</h4>
                   <ul className="space-y-2 sm:space-y-3">
                     {project.highlights.map((highlight, i) => (
                       <li key={i} className="flex gap-2 sm:gap-3 text-[#E5E7EB] text-xs sm:text-sm" style={{ lineHeight: 1.7 }}>

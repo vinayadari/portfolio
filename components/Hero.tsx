@@ -25,7 +25,7 @@ export default function Hero() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#38BDF8]/10 border border-[#38BDF8]/20">
               <div className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse" />
-              <span className="text-sm font-medium text-[#38BDF8]">Open to Backend Roles</span>
+              <span className="text-sm font-medium text-[#38BDF8]">Open to Opportunities</span>
             </div>
           </motion.div>
 
@@ -92,11 +92,11 @@ export default function Hero() {
             className="space-y-4"
           >
             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold" style={{ fontWeight: 600, lineHeight: 1.3 }}>
-              Full Stack Developer & Machine Learning Enthusiast
+              Full Stack Developer
             </h2>
 
             <p className="text-base sm:text-lg md:text-xl text-[#9CA3AF] max-w-2xl" style={{ fontWeight: 400, lineHeight: 1.6 }}>
-              "im not a great coder, but a good coder with great habits"
+              Passionate and adaptable developer interested in building scalable web applications and backend systems, with a strong interest in integrating AI to create intelligent, impactful products.
             </p>
 
             <div className="flex items-center gap-2 text-[#9CA3AF] pt-2">

@@ -9,17 +9,14 @@ import {
   Wrench,
   Braces,
   FileCode,
-  Binary,
-  FileType,
   Layers,
   GitBranch,
   Package,
   Atom,
   Server,
-  Leaf,
-  Box,
   CircuitBoard,
-  Table
+  Table,
+  Globe
 } from "lucide-react";
 
 const techStack = {
@@ -27,22 +24,20 @@ const techStack = {
     { name: "Python", icon: Code2 },
     { name: "Java", icon: Braces },
     { name: "JavaScript", icon: FileCode },
-    { name: "SQL", icon: Database },
-    { name: "HTML5", icon: FileType },
-    { name: "CSS", icon: Layers },
-    { name: "C", icon: Binary },
   ],
-  "Developer Tools": [
-    { name: "Git", icon: GitBranch },
-    { name: "Postman", icon: Package },
-  ],
-  "Libraries & Frameworks": [
-    { name: "React", icon: Atom },
+  Frameworks: [
     { name: "Node.js", icon: Server },
     { name: "Express.js", icon: Server },
-    { name: "Spring Boot", icon: Leaf },
+    { name: "React.js", icon: Atom },
+  ],
+  Databases: [
     { name: "PostgreSQL", icon: CircuitBoard },
     { name: "MongoDB", icon: Table },
+  ],
+  Tools: [
+    { name: "Git", icon: GitBranch },
+    { name: "GitHub", icon: Globe },
+    { name: "Postman", icon: Package },
   ],
 };
 
@@ -75,7 +70,7 @@ export default function TechStack() {
           className="mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 text-white">
-            Tech Stack
+            Technical Skills
           </h2>
           <div className="w-12 sm:w-16 h-1 bg-[#8B5CF6]" />
         </motion.div>

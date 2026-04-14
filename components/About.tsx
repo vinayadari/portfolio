@@ -27,20 +27,19 @@ export default function About() {
           </p>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            How I approach backend development
+            How I approach development
           </h2>
 
           <p className="text-base sm:text-lg text-[#9CA3AF] mt-4 sm:mt-6 max-w-3xl leading-relaxed">
-            I enjoy working on backend systems that solve real-world problems.
-            While building projects, I focus on designing clear APIs, structuring
-            databases properly, and understanding trade-offs instead of blindly
-            following tools or trends.
+            Passionate and adaptable developer interested in building scalable
+            web applications and backend systems. I focus on designing clear APIs,
+            structuring databases properly, and understanding trade-offs instead
+            of blindly following tools or trends.
           </p>
 
           <p className="text-base sm:text-lg text-[#9CA3AF] mt-4 max-w-3xl leading-relaxed">
-            I’m also exploring machine learning using scikit-learn and learning
-            how to integrate trained models into backend systems where they add
-            real value.
+            I have a strong interest in integrating AI to create intelligent,
+            impactful products that deliver better user experiences.
           </p>
         </motion.div>
 
@@ -68,7 +67,7 @@ export default function About() {
                   </h3>
 
                   <p className="text-[#E5E7EB] mb-1 font-semibold">
-                    B.E. in Computer Science
+                    B.E. in Computer Science & Engineering
                   </p>
 
                   <p className="text-[#9CA3AF] text-sm mb-2">
@@ -76,12 +75,12 @@ export default function About() {
                   </p>
 
                   <p className="text-[#9CA3AF] text-sm mb-3">
-                    Currently in 5th Semester
+                    Currently in 6th Semester (2023 – 2027)
                   </p>
 
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#38BDF8]/10 border border-[#38BDF8]/20">
                     <span className="text-[#38BDF8] font-bold text-lg">
-                      CGPA: 9.34
+                      CGPA: 9.2
                     </span>
                   </div>
                 </div>
@@ -101,9 +100,9 @@ export default function About() {
                   </h3>
 
                   <ul className="text-[#9CA3AF] space-y-2 text-sm leading-relaxed">
-                    <li>• Keeping APIs modular and easy to extend</li>
-                    <li>• Designing databases carefully when scale or consistency matters</li>
-                    <li>• Handling authentication, validation, and edge cases properly</li>
+                    <li>• Building scalable web applications and backend systems</li>
+                    <li>• Integrating AI to create intelligent products</li>
+                    <li>• Designing RESTful APIs with proper authentication</li>
                     <li>• Writing code that stays readable and maintainable</li>
                   </ul>
                 </div>
